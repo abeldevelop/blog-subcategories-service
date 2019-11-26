@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.abeldevelop.architecture</groupId>
+        <artifactId>abeldevelop-parent-pom</artifactId>
+        <version>0.0.2-SNAPSHOT</version>
+    </parent>
+
+    <groupId>com.abeldevelop.blog.subcategories</groupId>
+    <artifactId>blog-subcategories</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    
+    <name>blog-subcategories</name>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.abeldevelop.blog.subcategories</groupId>
+				<artifactId>blog-subcategories-model</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.abeldevelop.blog.subcategories</groupId>
+				<artifactId>blog-subcategories-repository</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.abeldevelop.blog.subcategories</groupId>
+				<artifactId>blog-subcategories-dto</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.abeldevelop.blog.subcategories</groupId>
+				<artifactId>blog-subcategories-api</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.abeldevelop.blog.subcategories</groupId>
+				<artifactId>blog-subcategories-client</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.abeldevelop.blog.subcategories</groupId>
+				<artifactId>blog-subcategories-service</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+  <modules>
+    <module>blog-subcategories-model</module>
+    <module>blog-subcategories-repository</module>
+    <module>blog-subcategories-dto</module>
+    <module>blog-subcategories-api</module>
+    <module>blog-subcategories-client</module>
+    <module>blog-subcategories-service</module>
+  </modules>
+</project>
