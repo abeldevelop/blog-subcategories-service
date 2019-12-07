@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "f323927a-0c67-410b-80f1-0c1edb6bb77c",
+		"name": "blog-subcategory-service",
+		"description": "Api to manage the subcategories for the blog application\n\nContact Support:\n Name: Abel FernÃ¡ndez\n Email: abeldevelop@abeldevelop.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "subcategories",
+			"item": [
+				{
+					"name": "CreateNewSubcategory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"categoryCode\": \"first-category\",\n    \"name\": \"First Subcategory\"\n}"
+						},
+						"url": {
+							"raw": "{{blog-subcategories-service-url}}/v1/subcategories",
+							"host": [
+								"{{blog-subcategories-service-url}}"
+							],
+							"path": [
+								"v1",
+								"subcategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateSubcategory",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"categoryCode\": \"first-category\",\n    \"name\": \"Updated Subcategory\"\n}"
+						},
+						"url": {
+							"raw": "{{blog-subcategories-service-url}}/v1/subcategories/first-subcategory",
+							"host": [
+								"{{blog-subcategories-service-url}}"
+							],
+							"path": [
+								"v1",
+								"subcategories",
+								"first-subcategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindSubcategoryByCode",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{blog-subcategories-service-url}}/v1/subcategories/updated-subcategory",
+							"host": [
+								"{{blog-subcategories-service-url}}"
+							],
+							"path": [
+								"v1",
+								"subcategories",
+								"updated-subcategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindAllSubcategories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{blog-subcategories-service-url}}/v1/subcategories",
+							"host": [
+								"{{blog-subcategories-service-url}}"
+							],
+							"path": [
+								"v1",
+								"subcategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteSubcategory",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{blog-subcategories-service-url}}/v1/subcategories/updated-subcategory",
+							"host": [
+								"{{blog-subcategories-service-url}}"
+							],
+							"path": [
+								"v1",
+								"subcategories",
+								"updated-subcategory"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"variable": [
+		{
+			"id": "baseUrl",
+			"key": "baseUrl",
+			"value": "//localhost:8220/",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
